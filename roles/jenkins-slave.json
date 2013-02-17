@@ -1,0 +1,30 @@
+{
+    "name": "jenkins-slave",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "description": "Jenkins PHP slave box",
+    "run_list": [
+        "recipe[apt]",
+        "recipe[build-essential]",
+        "recipe[main::git]",
+        "recipe[main]",
+        "recipe[main::apt]",
+        "recipe[main::capistrano]",
+        "recipe[main::curl]",
+        "recipe[main::sqlite3]",
+        "recipe[main::php]",
+        "recipe[main::jenkins]"
+    ],
+    "default_attributes": {
+        "php": {
+            "directives": {
+                "date.timezone": "Europe/Brussels",
+                "post_max_size": "32M",
+                "short_open_tag": "On",
+                "html_errors": "On"
+            }
+        }
+    },
+    "override_attributes": {
+    }
+}

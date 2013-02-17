@@ -1,0 +1,9 @@
+[submodule "cookbooks/php"]
+	path = cookbooks/php
+	url = git://github.com/opscode-cookbooks/php.git
+[submodule "cookbooks/apt"]
+	path = cookbooks/apt
+	url = git://github.com/opscode-cookbooks/apt.git
+[submodule "cookbooks/build-essential"]
+	path = cookbooks/build-essential
+	url = git://github.com/opscode-cookbooks/build-essential.git
