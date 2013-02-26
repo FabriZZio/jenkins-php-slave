@@ -9,7 +9,9 @@
         "recipe[main::git]",
         "recipe[main]",
         "recipe[main::apt]",
+        "recipe[main::openssh]",
         "recipe[main::capistrano]",
+        "recipe[main::ant]",
         "recipe[main::curl]",
         "recipe[main::sqlite3]",
         "recipe[main::php]",
@@ -26,5 +28,14 @@
         }
     },
     "override_attributes": {
+        "openssh": {
+            "client": {
+                "forward_agent": "yes",
+                "forward_x11": "yes"
+            },
+            "server": {
+                "x11_forwarding": "yes"
+            }
+        }
     }
 }
